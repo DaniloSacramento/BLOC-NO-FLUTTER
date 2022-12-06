@@ -31,15 +31,15 @@ class _EsqueciSenhaState extends State<EsqueciSenha> {
   @override
   Widget build(BuildContext context) {
     var bloc = BlocProvider.of<FormBloc>(context);
-    var form = bloc.form;
+    
     return Form(
       key: _formKey,
       child: Scaffold(
         body: SingleChildScrollView(
-          child: BlocBuilder<FormBloc, FormState>(
+          child: BlocBuilder<FormBloc, LoginFormState>(
             bloc: bloc,
             builder: (context, state) {
-              var stateForm = (state as FormDefaultState);
+              var stateForm = (state as FormDefaulState );
               var form = stateForm.form;
               return Container(
                     child: Column(
