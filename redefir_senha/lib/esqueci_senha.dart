@@ -60,7 +60,7 @@ class _EsqueciSenhaState extends State<EsqueciSenha> {
                               const EdgeInsets.only(top: 40, right: 30, left: 30),
                           child: TextFormField(
                             onChanged: (email) =>
-                                bloc.add(FormEventUpdade(email: email)),
+                                bloc.add(SetEmailEvent(email: email)),
                             controller: _email,
                             validator: Validatorless.multiple([
                               Validatorless.required("Digite seu email"),
@@ -78,7 +78,7 @@ class _EsqueciSenhaState extends State<EsqueciSenha> {
                               const EdgeInsets.only(top: 40, right: 30, left: 30),
                           child: TextFormField(
                             onChanged: (senha) =>
-                                bloc.add(FormEventUpdade(senha: senha)),
+                                bloc.add(SetSenhaEvent(senha: senha)),
                             controller: _password,
                             validator: Validatorless.multiple([
                               Validatorless.required("Digite sua nova senha"),
@@ -110,7 +110,7 @@ class _EsqueciSenhaState extends State<EsqueciSenha> {
                               const EdgeInsets.only(top: 50, right: 30, left: 30),
                           child: TextFormField(
                             onChanged: (redefinirSenha) => bloc.add(
-                                FormEventUpdade(redefinirSenha: redefinirSenha)),
+                                SetRedefinirSenhaEvent(redefinirSenha: redefinirSenha)),
                             controller: _passwordConfirm,
                             validator: Validatorless.multiple([
                               Validatorless.required("Confirme sua nova senha"),
@@ -156,10 +156,7 @@ class _EsqueciSenhaState extends State<EsqueciSenha> {
                             width: 313,
                           ),
                         ),
-                        Text("oi"),
-                        Text(form.senha.toString()),
-                        Text(form.senha.toString()),
-                        Text(form.email.toString())
+                        
                       ],
                     ),
               

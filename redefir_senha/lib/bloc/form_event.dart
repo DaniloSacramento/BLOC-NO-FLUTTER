@@ -3,9 +3,7 @@ part of 'form_bloc.dart';
 
 @immutable
 abstract class FormEvent extends Equatable {
-   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+ const FormEvent();  
 }
 
 class FormEventUpdade extends FormEvent {
@@ -18,5 +16,46 @@ class FormEventUpdade extends FormEvent {
     this.senha,
     this.redefinirSenha,
   });
+  
+  @override
+  // TODO: implement props
+  List<Object?> get props => throw UnimplementedError();
 
+  
+
+}
+
+class SetEmailEvent extends FormEvent { 
+  final String email;
+
+  const SetEmailEvent({required this.email});
+  
+  @override
+  // TODO: implement props
+  List<Object?> get props =>[email]; 
+
+}
+
+
+class SetSenhaEvent extends FormEvent{ 
+  final String senha;
+
+  SetSenhaEvent(this.senha);
+  
+  @override
+  // TODO: implement props
+  List<Object?> get props => [senha]; 
+
+  
+}
+
+class SetRedefinirSenhaEvent extends FormEvent{ 
+  final String redefinirSenha;
+
+  SetRedefinirSenhaEvent(this.redefinirSenha);
+  
+  @override
+  // TODO: implement props
+  List<Object?> get props => [redefinirSenha]; 
+  
 }
