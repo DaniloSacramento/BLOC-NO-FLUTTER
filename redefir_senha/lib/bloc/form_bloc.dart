@@ -7,11 +7,11 @@ import '../models/formulario.dart';
 part 'form_event.dart';
 part 'form_state.dart';
 
-class FormBloc extends Bloc<FormEvent, FormState> {
+class FormBloc extends Bloc<FormEvent, LoginFormState> {
   FormBloc() : super(FormDefaulState(form:Forms.empty()));
   Forms _form = Forms.empty(); 
   @override 
-  Stream<FormState> mapEventToState(
+  Stream<LoginFormState> mapEventToState(
     FormEvent event,
   )async*{
     if(event is FormEventUpdade){

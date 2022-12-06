@@ -156,9 +156,10 @@ class _EsqueciSenhaState extends State<EsqueciSenha> {
                             width: 313,
                           ),
                         ),
+                        Text("oi"),
                         Text(form.senha.toString()),
                         Text(form.senha.toString()),
-                        Text(form.senha.toString()),
+                        Text(form.email.toString())
                       ],
                     ),
               

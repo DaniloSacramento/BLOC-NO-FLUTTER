@@ -2,16 +2,16 @@
 part of 'form_bloc.dart';
 
 @immutable
-abstract class FormState  {
+abstract class LoginFormState  {
    
 }
 
-class FormInitial extends FormState {
+class FormInitial extends LoginFormState {
  
 }
 
 
-class FormDefaulState extends FormState {
+class FormDefaulState extends LoginFormState {
  
   FormDefaulState({
     required this.form,
